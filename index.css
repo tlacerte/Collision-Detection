@@ -1,7 +1,11 @@
 body {
     text-align: center;
+    background: #333745;
+    color: white;
+    font-family: 'Montserrat Subrayada', sans-serif;
 }
 
 canvas {
     border: 1px solid black;
+    background: white;
 }

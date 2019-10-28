@@ -16,9 +16,9 @@ let baseY = Math.floor(Math.random() * 250)
 function step() {
     context.clearRect(0, 0, 300, 300)
         //player dot
-    context.fillStyle = 'red'
+    context.fillStyle = '#E63462'
     context.fillRect(playerX, playerY, 10, 10)
-        //blocking square
+        //winning square
     context.strokeRect(baseX, baseY, 50, 50)
         //takes function as an arg to refresh page
 
