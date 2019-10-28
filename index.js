@@ -22,21 +22,28 @@ function step() {
     context.strokeRect(baseX, baseY, 50, 50)
         //takes function as an arg to refresh page
 
-    //let sum = 0
     if (playerX >= baseX &&
         playerY >= baseY &&
         playerX <= baseX + 50 &&
         playerY <= baseY + 50) {
         baseX = Math.floor(Math.random() * 250)
         baseY = Math.floor(Math.random() * 250)
-            //sum += 1
-            //console.log(sum)
+
+        //score counter
+        getWinner()
     }
-    //score.innerHTML = sum
 
     requestAnimationFrame(step)
 }
 requestAnimationFrame(step)
+
+let count = 0;
+
+function getWinner() {
+    count += 1
+    console.log(count)
+    score.innerHTML = count
+}
 
 function handleInput(event) {
     let key = event.key
