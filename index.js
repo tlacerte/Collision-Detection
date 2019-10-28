@@ -5,9 +5,10 @@ canvas.height = 300
 
 const context = canvas.getContext('2d')
 
-
+//player coordinates 
 let playerX = 20
 let playerY = 20
+    //box coordinates 
 let baseX = Math.floor(Math.random() * 250)
 let baseY = Math.floor(Math.random() * 250)
 
@@ -20,7 +21,6 @@ function step() {
     context.fillRect(playerX, playerY, 10, 10)
         //winning square
     context.strokeRect(baseX, baseY, 50, 50)
-        //takes function as an arg to refresh page
 
     if (playerX >= baseX &&
         playerY >= baseY &&
@@ -32,7 +32,7 @@ function step() {
         //score counter
         getWinner()
     }
-
+    //takes function as an arg to refresh page
     requestAnimationFrame(step)
 }
 requestAnimationFrame(step)
@@ -41,10 +41,11 @@ let count = 0;
 
 function getWinner() {
     count += 1
-    console.log(count)
+        //console.log(count)
     score.innerHTML = count
 }
 
+//moving 5 pixels each direction of keypresses
 function handleInput(event) {
     let key = event.key
     if (key === 'a') {
