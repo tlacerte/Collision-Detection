@@ -8,9 +8,14 @@ const context = canvas.getContext('2d')
 //player coordinates 
 let playerX = 20
 let playerY = 20
-    //box coordinates 
+
+//box coordinates 
 let baseX = Math.floor(Math.random() * 250)
 let baseY = Math.floor(Math.random() * 250)
+
+//box size 
+let boxX = 50
+let boxY = 50
 
 
 //functions
@@ -20,7 +25,7 @@ function step() {
     context.fillStyle = '#E63462'
     context.fillRect(playerX, playerY, 10, 10)
         //winning square
-    context.strokeRect(baseX, baseY, 50, 50)
+    context.strokeRect(baseX, baseY, boxX, boxY)
 
     if (playerX >= baseX &&
         playerY >= baseY &&
@@ -28,8 +33,9 @@ function step() {
         playerY <= baseY + 50) {
         baseX = Math.floor(Math.random() * 250)
         baseY = Math.floor(Math.random() * 250)
-
-        //score counter
+        boxX = boxX / 1.15
+        boxY = boxY / 1.15
+            //score counter
         getWinner()
     }
     //takes function as an arg to refresh page
@@ -43,6 +49,10 @@ function getWinner() {
     count += 1
         //console.log(count)
     score.innerHTML = count
+
+    if (count === 5) {
+        console.log('winner')
+    }
 }
 
 //moving 5 pixels each direction of keypresses
