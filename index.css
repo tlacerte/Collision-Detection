@@ -18,3 +18,17 @@ section {
     font-size: 3vmin;
     color: #E63462;
 }
+
+button {
+    background-color: transparent;
+    border-radius: 3px;
+    border: 1px solid white;
+    color: white;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-size: 3vmin;
+    margin-top: 1vmin;
+}
+
+button:hover {
+    background-color: #E63462;
+}

@@ -1,5 +1,6 @@
 const canvas = document.querySelector('canvas')
 const score = document.getElementById('score')
+
 canvas.width = 300
 canvas.height = 300
 
