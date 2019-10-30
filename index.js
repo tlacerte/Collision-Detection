@@ -1,6 +1,6 @@
 const canvas = document.querySelector('canvas')
 const score = document.getElementById('score')
-
+const main = document.querySelector('main')
 canvas.width = 300
 canvas.height = 300
 
@@ -51,8 +51,8 @@ function getWinner() {
         //console.log(count)
     score.innerHTML = count
 
-    if (count === 5) {
-        console.log('winner')
+    if (count === 10) {
+        main.innerHTML = "you win!"
     }
 }
 

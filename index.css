@@ -5,6 +5,10 @@ body {
     font-family: 'Montserrat Subrayada', sans-serif;
 }
 
+main {
+    font-size: 10vmin;
+}
+
 canvas {
     border: 2px solid black;
     background: white;
