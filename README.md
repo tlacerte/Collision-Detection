@@ -1,0 +1,1 @@
+Use the keys 'w', 'a', 's', and 'd' as the arrows of the keyboard. chase the large box as it gets smaller and smaller. You win when you reach hit the square 10 times. 
